@@ -11,24 +11,7 @@ export const AdminDashboardRoutes:Routes=[
       {
         path: "formation",
         loadComponent: () => import("../admin-dashboard/pages/formation/formation.component")
-          .then((m) => m.FormationComponent),
-        children:[
-          {
-            path:"add",
-            loadComponent:()=>import("./pages/formation/pages/add-formation/add-formation.component")
-              .then((m)=>m.AddFormationComponent)
-          },
-          {
-            path:"list",
-            loadComponent:()=>import("./pages/formation/pages/add-formation/add-formation.component")
-              .then((m)=>m.AddFormationComponent)
-          },
-          {
-            path:"edit",
-            loadComponent:()=>import("./pages/formation/pages/add-formation/add-formation.component")
-              .then((m)=>m.AddFormationComponent)
-          }
-        ]
+          .then((m) => m.FormationComponent)
       },
       {
         path: "formateur",

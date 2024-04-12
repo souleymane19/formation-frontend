@@ -7,3 +7,11 @@ export interface User {
     active :string;
     role_id:string;
 }
+
+export interface UserFormation{
+  userId:number
+  formationId :number
+}
+
+
+

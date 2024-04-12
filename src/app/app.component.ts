@@ -39,20 +39,20 @@ export class AppComponent implements OnInit{
 
  // url = '';
 
-  // onSelectFile(event: Event) {
-  //   // @ts-ignore
-  //   if (event.target.files && event.target.files[0]) {
-  //     var reader = new FileReader();
-  //
-  //     // @ts-ignore
-  //     reader.readAsDataURL(event.target.files[0]); // read file as data url
-  //
-  //     reader.onload = (event) => { // called once readAsDataURL is completed
-  //       // @ts-ignore
-  //       this.url = event.target.result;
-  //     }
-  //   }
-  // }
+  onSelectFile(event: Event) {
+    // @ts-ignore
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+
+      // @ts-ignore
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+      reader.onload = (event) => { // called once readAsDataURL is completed
+        // @ts-ignore
+        this.url = event.target.result;
+      }
+    }
+  }
 
 
 }

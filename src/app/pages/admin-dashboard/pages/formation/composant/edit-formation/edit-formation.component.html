@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>Dialog with elements</h2>
+<mat-dialog-content style="width: 400px">
+
+  <form class="example-form " [formGroup]="formControl" (ngSubmit)="onSubmit()">
+
+    <mat-card class="card">
+      @if (loading){
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+
+      }
+      <mat-form-field class="example-full-width" >
+        <mat-label>titre</mat-label>
+        <input type="text" matInput formControlName="titre" value="formation.titre">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" >
+        <mat-label>description</mat-label>
+        <input type="description" matInput formControlName="description" >
+      </mat-form-field>
+      <mat-label>images</mat-label>
+      @if(url){
+        <img [src]="url" style="height:200px ">
+      }
+      <input type="file" id="file" (change)="onFileChange($event)" >
+      <button mat-raised-button color="primary" [disabled]="!formControl.valid">Enregistrer
+        <mat-icon>
+          <span class="material-symbols-outlined">login</span>
+        </mat-icon>
+      </button>
+      <a class="d-flex justify-content-end" routerLink="/login" >j'ai pas de  compte</a>
+    </mat-card>
+  </form>
+
+
+
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
